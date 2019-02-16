@@ -18,6 +18,7 @@ namespace PolyOne.Engine
         static public int ActualWidth { get; private set; }
         static public int ActualHeight { get; private set; }
         static public float DeltaTime { get; private set; }
+        static public float DeltaTimeMilli { get; private set; }
         static public TimeSpan TotalTime { get; private set; }
         static public SpriteBatch SpriteBatch { get; private set; }
         static public Color ClearColor;
@@ -81,6 +82,7 @@ namespace PolyOne.Engine
 
         protected override void Update(GameTime gameTime)
         {
+            DeltaTimeMilli = (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             DeltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             TotalTime = gameTime.TotalGameTime;
 

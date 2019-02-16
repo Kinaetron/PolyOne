@@ -77,11 +77,11 @@ namespace PolyOne.Animation
 
             if (pauseTime > 0)
             {
-                pauseTime -= Engine.Engine.DeltaTime;
+                pauseTime -= Engine.Engine.DeltaTimeMilli;
             }
             else
             {
-                MsUntilNextCel -= (int)Engine.Engine.DeltaTime;
+                MsUntilNextCel -= (int)Engine.Engine.DeltaTimeMilli;
             }
 
             if (FrameIndex == Animation.NextMoveFrame && Animation.NextMoveFrame > 0) {
@@ -128,10 +128,10 @@ namespace PolyOne.Animation
             }
 
             if (pauseTime > 0) {
-                pauseTime -= Engine.Engine.DeltaTime;
+                pauseTime -= Engine.Engine.DeltaTimeMilli;
             }
             else {
-                MsUntilNextCel -= (int)Engine.Engine.DeltaTime;
+                MsUntilNextCel -= (int)Engine.Engine.DeltaTimeMilli;
             }
 
             float relativeVelocity = Math.Abs(velocityX / maxSpeed);
