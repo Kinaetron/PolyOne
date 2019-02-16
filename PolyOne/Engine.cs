@@ -30,7 +30,7 @@ namespace PolyOne.Engine
 
 #if DEBUG
         private bool debugInformation = false;
-        private SpriteFont debugFont;
+        //private SpriteFont debugFont;
 
         private TimeSpan counterElapsed = TimeSpan.Zero;
         private int frameCount = 0;
@@ -52,7 +52,7 @@ namespace PolyOne.Engine
 
             Graphics = new GraphicsDeviceManager(this);
 
-            Content.RootDirectory = @"Content";
+            Content.RootDirectory = "Content";
 
             MenuContentManager = new ContentManager(Content.ServiceProvider, Content.RootDirectory);
 
@@ -67,7 +67,7 @@ namespace PolyOne.Engine
         {
             base.Initialize();
 
-            //Tracker.Initialize();
+            Tracker.Initialize();
             PolyInput.Initialize();
             SpriteBatch = new SpriteBatch(GraphicsDevice);
         }
@@ -76,7 +76,7 @@ namespace PolyOne.Engine
         {
             base.LoadContent();
 
-            debugFont = Content.Load<SpriteFont>("MenuAssets/menufont");
+            //debugFont = Content.Load<SpriteFont>("MenuAssets/menufont");
         }
 
         protected override void Update(GameTime gameTime)
@@ -121,16 +121,16 @@ namespace PolyOne.Engine
 
             base.Draw(gameTime);
 #if DEBUG
-            if (debugInformation == true)
-            {
-                frameCount++;
-                Begin();
-                SpriteBatch.DrawString(debugFont, "FPS: " + FPS.ToString(), new Vector2(20, 40), Color.White);
-                SpriteBatch.DrawString(debugFont, "Frame Time: " + DeltaTime.ToString(), new Vector2(20, 70), Color.White);
-                SpriteBatch.DrawString(debugFont, "Total Memory: " + (GC.GetTotalMemory(true) / 1048576f).ToString("F") + " MB ", new Vector2(20, 100), Color.White);
+            //if (debugInformation == true)
+            //{
+            //    frameCount++;
+            //    Begin();
+            //    SpriteBatch.DrawString(debugFont, "FPS: " + FPS.ToString(), new Vector2(20, 40), Color.White);
+            //    SpriteBatch.DrawString(debugFont, "Frame Time: " + DeltaTime.ToString(), new Vector2(20, 70), Color.White);
+            //    SpriteBatch.DrawString(debugFont, "Total Memory: " + (GC.GetTotalMemory(true) / 1048576f).ToString("F") + " MB ", new Vector2(20, 100), Color.White);
 
-                End();
-            }
+            //    End();
+            //}
 #endif
         }
 
