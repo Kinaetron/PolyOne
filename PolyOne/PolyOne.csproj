@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\FNA\FNA.csproj">
@@ -48,6 +49,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation\AnimationData.cs" />
+    <Compile Include="Animation\AnimationPlayer.cs" />
     <Compile Include="Collision\Circle.cs" />
     <Compile Include="Collision\Collide.cs" />
     <Compile Include="Collision\Collider.cs" />
@@ -55,19 +58,30 @@
     <Compile Include="Collision\Grid.cs" />
     <Compile Include="Collision\Hitbox.cs" />
     <Compile Include="Components\Component.cs" />
+    <Compile Include="Components\Logic\CounterSet.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Input\PolyInput.cs" />
+    <Compile Include="ParticleSystem\Particle.cs" />
+    <Compile Include="ParticleSystem\ParticleEngine.cs" />
     <Compile Include="Scene.cs" />
     <Compile Include="Utility\Camera.cs" />
     <Compile Include="Utility\ComponentList.cs" />
     <Compile Include="Utility\EntityList.cs" />
+    <Compile Include="Utility\PolyDebug.cs" />
     <Compile Include="Utility\Resolution.cs" />
+    <Compile Include="Utility\SaveSystem.cs" />
+    <Compile Include="Utility\Sprite.cs" />
     <Compile Include="Utility\TagList.cs" />
+    <Compile Include="Utility\Tile.cs" />
+    <Compile Include="Utility\TileInformation.cs" />
     <Compile Include="Utility\Tracker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Components\Logic\" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
