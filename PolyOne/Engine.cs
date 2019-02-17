@@ -95,7 +95,7 @@ namespace PolyOne.Engine
             }
 
             if (ExitOnEscapeKeyPress == true &&
-               PolyInput.Keyboard.Pressed(Microsoft.Xna.Framework.Input.Keys.Q))
+               PolyInput.Keyboard.Pressed(Microsoft.Xna.Framework.Input.Keys.Escape))
             {
                 Exit();
                 return;

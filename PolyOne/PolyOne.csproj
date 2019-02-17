@@ -64,6 +64,8 @@
     <Compile Include="Engine.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Input\PolyInput.cs" />
+    <Compile Include="LevelProcessor\LevelData.cs" />
+    <Compile Include="LevelProcessor\LevelTiler.cs" />
     <Compile Include="ParticleSystem\Particle.cs" />
     <Compile Include="ParticleSystem\ParticleEngine.cs" />
     <Compile Include="Scene.cs" />
@@ -85,6 +87,7 @@
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
